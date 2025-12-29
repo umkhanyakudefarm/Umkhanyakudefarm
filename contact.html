@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact • Umkhanyakude Farm</title>
+  <link rel="icon" href="https://i.ibb.co/zH03HHJg/1000353465-1-removebg-preview.png" type="image/png">
+  <link rel="apple-touch-icon" href="https://i.ibb.co/zH03HHJg/1000353465-1-removebg-preview.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #D4AF37;
+      --light-gold: #FFEA00;
+      --green: #228B22;
+      --dark-green: #1A6B1A;
+      --light-green: #32CD32;
+      --blue: #2A6EBB;
+      --cream: #FFFFFF;
+      --white: #FFFFFF;
+      --black: #111111;
+      --gray-light: #F8F9FA;
+      --gray-medium: #E9ECEF;
+      --card-bg: rgba(255, 255, 255, 0.95);
+      --shadow-color: rgba(0, 0, 0, 0.08);
+      --shadow-hover: rgba(0, 0, 0, 0.15);
+      --accent-color: #228B22;
+      --accent-glow: rgba(34, 139, 34, 0.15);
+      --gradient-green: linear-gradient(135deg, #228B22, #32CD32);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Exo 2', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      color: var(--black);
+      background-color: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+      background: linear-gradient(135deg, #f8fff8 0%, #ffffff 100%);
+    }
+    
+    h1, h2, h3, .section-title, .logo {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+    }
+    
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    
+    /* Futuristic Header with Glass Effect */
+    header {
+      background-color: #FFFFFF;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(34, 139, 34, 0.1);
+    }
+    
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+    
+    .logo {
+      order: 2;
+      position: relative;
+      transform-style: preserve-3d;
+      perspective: 1000px;
+    }
+    
+    .logo img {
+      height: 80px;
+      width: auto;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+      transition: transform 0.5s ease;
+    }
+    
+    .logo:hover img {
+      transform: rotateY(15deg) scale(1.05);
+      filter: drop-shadow(0 5px 10px rgba(34, 139, 34, 0.3));
+    }
+    
+    nav {
+      order: 1;
+    }
+    
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 18px;
+    }
+    
+    .nav-links li {
+      position: relative;
+    }
+    
+    .nav-links a {
+      text-decoration: none;
+      color: var(--black);
+      font-weight: 600;
+      font-size: 16px;
+      padding: 12px 18px;
+      border-radius: 10px;
+      transition: all 0.2s ease;
+      position: relative;
+      z-index: 1;
+      border: 1px solid rgba(0,0,0,0.06);
+      background-color: transparent;
+    }
+    
+    .nav-links a.active {
+      color: var(--accent-color);
+      background-color: rgba(34, 139, 34, 0.12);
+      border-color: rgba(34, 139, 34, 0.35);
+      box-shadow: 0 4px 10px rgba(34, 139, 34, 0.2);
+    }
+    .nav-links a:focus-visible {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 2px;
+    }
+    
+    .nav-links a:hover {
+      color: var(--accent-color);
+      background-color: rgba(34, 139, 34, 0.08);
+      border-color: rgba(34, 139, 34, 0.25);
+      box-shadow: 0 4px 10px var(--accent-glow);
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      font-size: 24px;
+      background: none;
+      border: none;
+      color: var(--accent-color);
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    
+    .mobile-menu-btn:hover {
+      background-color: rgba(34, 139, 34, 0.1);
+      box-shadow: 0 5px 15px var(--accent-glow);
+    }
+    
+    /* Hero Section with 3D Parallax */
+    .hero {
+      position: relative;
+      color: var(--white);
+      padding: 120px 0;
+      text-align: center;
+      overflow: hidden;
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .hero-contact {
+      background: linear-gradient(rgba(34, 139, 34, 0.70), rgba(50, 205, 50, 0.75)), 
+                  url('https://i.ibb.co/X1Wgzrc/IMG-20251207-WA0048.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .hero-contact:before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.12));
+    }
+    
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      letter-spacing: 2px;
+      animation: float 3s ease-in-out infinite;
+      transform-style: preserve-3d;
+      perspective: 500px;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      background-color: rgba(255, 255, 255, 0.15);
+      padding: 25px;
+      border-radius: 10px;
+      border-left: 3px solid var(--white);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+    }
+    
+    /* Breadcrumbs */
+    .breadcrumbs {
+      background-color: var(--gray-light);
+      padding: 15px 0;
+      border-bottom: 1px solid var(--gray-medium);
+    }
+    
+    .breadcrumbs .container {
+      display: flex;
+      align-items: center;
+    }
+    
+    .breadcrumbs a {
+      color: var(--accent-color);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .breadcrumbs a:hover {
+      color: var(--black);
+    }
+    
+    .breadcrumbs span {
+      margin: 0 10px;
+      color: #666;
+    }
+    
+    /* Contact Section with 3D Cards */
+    .contact {
+      padding: 100px 0;
+      background-color: transparent;
+      position: relative;
+    }
+    
+    .section-title {
+      text-align: center;
+      color: var(--accent-color);
+      font-size: 3rem;
+      margin-bottom: 60px;
+      position: relative;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+    }
+    
+    .contact-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 50px;
+      margin-top: 40px;
+    }
+    
+    .contact-info, .contact-form {
+      background-color: var(--card-bg);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px var(--shadow-color);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      transform-style: preserve-3d;
+      transform: perspective(1000px) rotateY(0deg);
+      transition: all 0.5s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .contact-info:before, .contact-form:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: var(--gradient-green);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.5s ease;
+    }
+    
+    .contact-info:hover:before, .contact-form:hover:before {
+      transform: scaleX(1);
+    }
+    
+    .contact-info:hover, .contact-form:hover {
+      transform: perspective(1000px) rotateY(-3deg) translateY(-10px);
+      box-shadow: 0 25px 60px var(--shadow-hover), 0 0 40px var(--accent-glow);
+    }
+    
+    .contact-info h2, .contact-form h2 {
+      color: var(--accent-color);
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .contact-info h2:after, .contact-form h2:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--gradient-green);
+    }
+    
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      background: linear-gradient(45deg, #25D366, #128C7E);
+      color: white;
+      padding: 18px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-bottom: 30px;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+      transform-style: preserve-3d;
+      position: relative;
+      overflow: hidden;
+      font-size: 1.1rem;
+    }
+    
+    .whatsapp-btn:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transition: left 0.7s ease;
+    }
+    
+    .whatsapp-btn:hover:before {
+      left: 100%;
+    }
+    
+    .whatsapp-btn:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
+      letter-spacing: 1px;
+    }
+    
+    .whatsapp-btn i {
+      margin-right: 15px;
+      font-size: 24px;
+    }
+    
+    .contact-details {
+      margin-bottom: 40px;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: 15px;
+      background-color: rgba(248, 249, 250, 0.8);
+      transition: all 0.3s ease;
+      transform-style: preserve-3d;
+      transform: perspective(500px) translateZ(0);
+    }
+    
+    .contact-item:hover {
+      background-color: rgba(34, 139, 34, 0.1);
+      transform: perspective(500px) translateZ(10px);
+      box-shadow: 0 10px 25px var(--accent-glow);
+    }
+    
+    .contact-item i {
+      background: var(--gradient-green);
+      color: var(--white);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      font-size: 24px;
+      box-shadow: 0 8px 20px rgba(34, 139, 34, 0.3);
+      flex-shrink: 0;
+    }
+    
+    .contact-item h4 {
+      color: var(--accent-color);
+      margin-bottom: 5px;
+      font-size: 1.2rem;
+    }
+    
+    .contact-item p {
+      color: var(--black);
+      opacity: 0.9;
+    }
+    
+    .hours {
+      background-color: rgba(248, 249, 250, 0.9);
+      padding: 30px;
+      border-radius: 15px;
+      margin-top: 20px;
+      border-left: 5px solid var(--accent-color);
+      box-shadow: 0 10px 25px var(--shadow-color);
+      transform-style: preserve-3d;
+      transform: perspective(500px) rotateX(0deg);
+      transition: all 0.3s ease;
+    }
+    
+    .hours:hover {
+      transform: perspective(500px) rotateX(2deg);
+      box-shadow: 0 15px 35px var(--shadow-hover);
+    }
+    
+    .hours h3 {
+      color: var(--accent-color);
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    
+    .hours h3:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      background: var(--gradient-green);
+    }
+    
+    .hours p {
+      margin-bottom: 10px;
+      color: var(--black);
+    }
+    
+    .form-group {
+      margin-bottom: 30px;
+      position: relative;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 12px;
+      font-weight: 600;
+      color: var(--accent-color);
+      font-size: 1.1rem;
+    }
+    
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 18px;
+      background-color: rgba(248, 249, 250, 0.9);
+      border: 2px solid rgba(34, 139, 34, 0.2);
+      border-radius: 12px;
+      font-size: 16px;
+      color: var(--black);
+      transition: all 0.3s ease;
+      font-family: 'Exo 2', sans-serif;
+    }
+    
+    .form-group input:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent-color);
+      background-color: white;
+      box-shadow: 0 10px 25px var(--accent-glow);
+      transform: translateY(-3px);
+    }
+    
+    .form-group textarea {
+      height: 180px;
+      resize: vertical;
+    }
+    
+    .submit-btn {
+      background: var(--gradient-green);
+      color: white;
+      border: none;
+      padding: 20px;
+      border-radius: 12px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 25px rgba(34, 139, 34, 0.3);
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      letter-spacing: 1px;
+    }
+    
+    .submit-btn:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transition: left 0.7s ease;
+    }
+    
+    .submit-btn:hover:before {
+      left: 100%;
+    }
+    
+    .submit-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(34, 139, 34, 0.4);
+      letter-spacing: 2px;
+    }
+    
+    /* Content Section */
+    .content-section {
+      padding: 80px 0;
+      background-color: transparent;
+    }
+    
+    /* Accordion with 3D Effects */
+    .accordion {
+      margin-top: 40px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .accordion-item {
+      background-color: var(--card-bg);
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 30px var(--shadow-color);
+      overflow: hidden;
+      transform-style: preserve-3d;
+      transform: perspective(800px) rotateX(0deg);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+    }
+    
+    .accordion-item:hover {
+      transform: perspective(800px) rotateX(1deg);
+      box-shadow: 0 15px 40px var(--shadow-hover);
+    }
+    
+    .accordion-item button {
+      width: 100%;
+      padding: 25px;
+      text-align: left;
+      background: linear-gradient(90deg, rgba(34, 139, 34, 0.1), rgba(255, 255, 255, 0.9));
+      border: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--accent-color);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+    
+    .accordion-item button:hover {
+      background: linear-gradient(90deg, rgba(34, 139, 34, 0.15), rgba(255, 255, 255, 0.95));
+    }
+    
+    .accordion-item button:after {
+      content: '+';
+      font-size: 2rem;
+      font-weight: 300;
+      transition: transform 0.3s ease;
+    }
+    
+    .accordion-item.active button:after {
+      transform: rotate(45deg);
+    }
+    
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+    }
+    
+    .accordion-content p {
+      padding: 30px;
+      color: var(--black);
+      line-height: 1.7;
+      font-size: 1.1rem;
+    }
+    
+    /* Location Section with 3D Map */
+    .location {
+      padding: 100px 0;
+      background-color: transparent;
+    }
+    
+    .location-content {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+    }
+    
+    .location-text {
+      flex: 1;
+      background-color: var(--card-bg);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px var(--shadow-color);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      transform-style: preserve-3d;
+      transform: perspective(1000px) rotateY(-5deg);
+      transition: all 0.5s ease;
+    }
+    
+    .location-text:hover {
+      transform: perspective(1000px) rotateY(0deg) translateY(-10px);
+      box-shadow: 0 25px 60px var(--shadow-hover), 0 0 40px var(--accent-glow);
+    }
+    
+    .location-text h2 {
+      color: var(--accent-color);
+      font-size: 2.5rem;
+      margin-bottom: 25px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .location-text h2:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 80px;
+      height: 3px;
+      background: var(--gradient-green);
+    }
+    
+    .info-list {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 15px;
+      margin: 25px 0;
+    }
+    
+    .info-label {
+      font-weight: 600;
+      color: var(--accent-color);
+    }
+    
+    .info-value {
+      color: var(--black);
+    }
+    
+    .location-map {
+      flex: 1;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px var(--shadow-color);
+      transform-style: preserve-3d;
+      transform: perspective(1000px) rotateY(5deg);
+      transition: all 0.5s ease;
+      height: 500px;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+    }
+    
+    .location-map:hover {
+      transform: perspective(1000px) rotateY(0deg) translateY(-10px);
+      box-shadow: 0 30px 70px var(--shadow-hover), 0 0 50px var(--accent-glow);
+    }
+    
+    .location-map iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    
+    /* Futuristic Footer */
+    footer {
+      background-color: var(--gray-light);
+      color: var(--black);
+      padding: 80px 0 30px;
+      border-top: 1px solid var(--gray-medium);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    footer:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--gradient-green);
+    }
+    
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+    
+    .footer-column h3 {
+      color: var(--accent-color);
+      font-size: 1.5rem;
+      margin-bottom: 25px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .footer-column h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 2px;
+      background-color: var(--accent-color);
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .footer-links a, .footer-links li {
+      color: var(--black);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      opacity: 0.9;
+    }
+    
+    .footer-links a:hover {
+      color: var(--accent-color);
+      opacity: 1;
+      padding-left: 10px;
+    }
+    
+    .footer-links i {
+      margin-right: 10px;
+      color: var(--accent-color);
+      width: 20px;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 25px;
+    }
+    
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background-color: white;
+      border-radius: 50%;
+      color: var(--accent-color);
+      font-size: 22px;
+      transition: all 0.3s ease;
+      border: 1px solid var(--gray-medium);
+      box-shadow: 0 8px 20px var(--shadow-color);
+      transform-style: preserve-3d;
+    }
+    
+    .social-links a:hover {
+      background-color: var(--accent-color);
+      color: white;
+      transform: translateY(-8px) scale(1.1);
+      box-shadow: 0 15px 30px var(--accent-glow);
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid var(--gray-medium);
+      font-size: 14px;
+      opacity: 0.7;
+    }
+    
+    /* Scroll Animation Classes */
+    .reveal {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease;
+    }
+    
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Particle Background Effect */
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+    }
+    
+    .particle {
+      position: absolute;
+      background-color: rgba(34, 139, 34, 0.1);
+      border-radius: 50%;
+      animation: floatParticle 20s infinite linear;
+    }
+    
+    @keyframes floatParticle {
+      0% { transform: translateY(100vh) translateX(0); }
+      100% { transform: translateY(-100px) translateX(100px); }
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+      .hero h1 {
+        font-size: 3rem;
+      }
+      
+      .location-content {
+        flex-direction: column;
+      }
+      
+      .location-text, .location-map {
+        width: 100%;
+        transform: none !important;
+      }
+      
+      .location-map {
+        height: 400px;
+        margin-top: 30px;
+      }
+      
+      .section-title {
+        font-size: 2.5rem;
+      }
+      
+      .contact-info, .contact-form {
+        padding: 30px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .nav-links {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        flex-direction: column;
+        background-color: #FFFFFF;
+        padding: 30px;
+        box-shadow: 0 10px 30px var(--shadow-hover);
+        transition: left 0.5s ease;
+        border-top: 1px solid var(--gray-medium);
+        z-index: 999;
+      }
+      
+      .nav-links.active {
+        left: 0;
+      }
+      
+      .nav-links li {
+        margin: 15px 0;
+        width: 100%;
+        text-align: center;
+      }
+      
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .section-title {
+        font-size: 2.2rem;
+      }
+      
+      .contact-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero {
+        padding: 80px 0;
+      }
+      
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .contact, .content-section, .location {
+        padding: 60px 0;
+      }
+      
+      .section-title {
+        font-size: 1.8rem;
+      }
+      
+      .contact-item {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .contact-item i {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+      
+      .contact-info, .contact-form, .location-text {
+        padding: 25px;
+      }
+      
+      .whatsapp-btn {
+        padding: 15px 25px;
+        font-size: 1rem;
+      }
+    }
+    .page-loader { position: fixed; inset: 0; background: radial-gradient(ellipse at center, rgba(34,139,34,0.08), rgba(212,175,55,0.06)), #FFFFFF; display: grid; place-items: center; z-index: 2000; transition: opacity 0.35s ease; backdrop-filter: blur(4px); }
+    .page-loader.hide { opacity: 0; pointer-events: none; }
+    .loader-wrap { position: relative; width: min(42vw, 220px); height: min(42vw, 220px); border-radius: 50%; overflow: hidden; box-shadow: 0 12px 30px rgba(0,0,0,0.15); }
+    .loader-image { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; transform: scale(1); animation: loaderPulse 1.6s ease-in-out infinite; }
+    .loader-ring { position: absolute; inset: -10px; border-radius: 50%; background: conic-gradient(from 0deg, rgba(34,139,34,0.85), rgba(212,175,55,0.85), rgba(42,110,187,0.85), rgba(34,139,34,0.85)); -webkit-mask: radial-gradient(circle, transparent calc(50% - 9px), #000 calc(50% - 9px)); mask: radial-gradient(circle, transparent calc(50% - 9px), #000 calc(50% - 9px)); animation: loaderSpin 1.2s linear infinite; filter: drop-shadow(0 0 12px rgba(34,139,34,0.25)); }
+    @keyframes loaderSpin { to { transform: rotate(360deg); } }
+    @keyframes loaderPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.04); } }
+  </style>
+</head>
+<body>
+  <!-- Particle Background -->
+  <div class="particles" id="particles"></div>
+  <div id="pageLoader" class="page-loader"><div class="loader-wrap"><img class="loader-image" src="https://i.ibb.co/svNJ8tZC/IMG-20251207-WA0049.jpg" alt="Loading"><div class="loader-ring"></div></div></div>
+  
+  <header>
+    <div class="container header-container">
+      <nav>
+        <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html" class="active">Contact Us</a></li>
+          <li><a href="chick-rearing.html">Chick Rearing & Brooding</a></li>
+        </ul>
+      </nav>
+      <div class="logo">
+        <a href="index.html"><img src="https://i.ibb.co/zH03HHJg/1000353465-1-removebg-preview.png" alt="Umkhanyakude Farm Logo" loading="lazy"></a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero hero-contact">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Reach out for orders, quotes, or farm visits.</p>
+    </div>
+  </section>
+  
+  <nav class="breadcrumbs">
+    <div class="container"><a href="index.html">Home</a> <span>/</span> <span>Contact</span></div>
+  </nav>
+
+  <section class="contact reveal" id="contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h2>Contact Details</h2>
+          <div class="contact-details">
+                <a href="https://wa.me/26878552994" class="whatsapp-btn" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i> WhatsApp Us
+            </a>
+            <div class="contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <div>
+                <h4>Phone</h4>
+                <p>+268 7855 2994</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                                <p>Temvelo@Umkhanyakudefarm.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Address</h4>
+                <p>Ngwenya Village, Hhohho Region, Eswatini</p>
+              </div>
+            </div>
+          </div>
+          <div class="hours">
+            <h3>Working Hours</h3>
+            <p>Mon–Fri: 8:00–17:00</p>
+            <p>Sat: 8:00–13:00</p>
+            <p>Sun: Closed</p>
+          </div>
+        </div>
+        <div class="contact-form">
+          <h2>Send a Message</h2>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button class="submit-btn" type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section reveal">
+    <div class="container">
+      <h2 class="section-title">FAQs</h2>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button>How do I place an order?</button>
+          <div class="accordion-content"><p>Message us via WhatsApp or use the contact form with product type and quantity.</p></div>
+        </div>
+        <div class="accordion-item">
+          <button>Do you offer delivery?</button>
+          <div class="accordion-content"><p>Local delivery can be arranged within the Hhohho Region.</p></div>
+        </div>
+        <div class="accordion-item">
+          <button>What are your hours?</button>
+          <div class="accordion-content"><p>Mon–Fri 8:00–17:00, Sat 8:00–13:00. Emergency orders by phone.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="location reveal">
+    <div class="container">
+      <div class="location-content">
+        <div class="location-text">
+          <h2>Map & Coordinates</h2>
+          <div class="info-list">
+            <div class="info-label">GPS</div>
+          <div class="info-value">-26.232276544648144, 31.026650002047756</div>
+          <div class="info-label">Address</div>
+            <div class="info-value">Ngwenya Village, Hhohho Region, Eswatini</div>
+          </div>
+        </div>
+        <div class="location-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3586.881521692453!2d31.02411547637055!3d-26.22751736271909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ee7c3d5d6d6d6d5%3A0x1ee7c3d5d6d6d6d5!2sNgwenya%20Village%2C%20Eswatini!5e0!3m2!1sen!2s!4v168614567890" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="chick-rearing.html">Chick Rearing & Brooding</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Info</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> Ngwenya Village, Eswatini</li>
+            <li><i class="fas fa-phone-alt"></i> +268 7855 2994</li>
+            <li><i class="fas fa-envelope"></i> Temvelo@Umkhanyakudefarm.com</li>
+          </ul>
+          <a href="https://wa.me/26878552994" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+          <div class="social-links">
+            <a href="#" title="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.tiktok.com/@umkhanyakude_farm?is_from_webapp=1&sender_device=pc" title="TikTok" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/umkhanyakude_farm/" title="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com/@umkhanyakude_farm?si=qqOkmcdPmvfyvaWo" title="YouTube" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">Umkhanyakude Farm • Established 2025 • All rights reserved</div>
+    </div>
+  </footer>
+
+  <script>
+    // Contact form submission
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form values
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const email = document.getElementById('email').value;
+      
+      // Show success message with futuristic style
+      const notification = document.createElement('div');
+      notification.style.cssText = `
+        position: fixed;
+        top: 100px;
+        right: 20px;
+        background: linear-gradient(135deg, #228B22, #32CD32);
+        color: white;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 15px 35px rgba(34, 139, 34, 0.4);
+        z-index: 9999;
+        max-width: 350px;
+        transform: translateX(400px);
+        transition: transform 0.5s ease;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        font-family: 'Exo 2', sans-serif;
+      `;
+      notification.innerHTML = `
+        <h3 style="margin-bottom: 10px; font-family: 'Orbitron', sans-serif;">Thank you ${name}!</h3>
+        <p>Your message has been received. We'll contact you at ${phone} or ${email} shortly.</p>
+      `;
+      document.body.appendChild(notification);
+      
+      // Animate notification
+      setTimeout(() => {
+        notification.style.transform = 'translateX(0)';
+      }, 10);
+      
+      // Remove notification after 5 seconds
+      setTimeout(() => {
+        notification.style.transform = 'translateX(400px)';
+        setTimeout(() => {
+          document.body.removeChild(notification);
+        }, 500);
+      }, 5000);
+      
+      // Reset form
+      contactForm.reset();
+    });
+    
+    // Create particle background
+    const particlesContainer = document.getElementById('particles');
+    const particleCount = 25;
+    
+    for (let i = 0; i < particleCount; i++) {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      
+      // Random size between 1px and 5px
+      const size = Math.random() * 4 + 1;
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+      
+      // Random position
+      particle.style.left = `${Math.random() * 100}%`;
+      
+      // Random animation delay and duration
+      const delay = Math.random() * 15;
+      const duration = Math.random() * 10 + 10;
+      particle.style.animationDelay = `${delay}s`;
+      particle.style.animationDuration = `${duration}s`;
+      
+      // Random color (green or light green)
+      const color = Math.random() > 0.5 ? 'rgba(34, 139, 34, 0.1)' : 'rgba(50, 205, 50, 0.1)';
+      particle.style.backgroundColor = color;
+      
+      particlesContainer.appendChild(particle);
+    }
+    
+    // Add 3D hover effect to contact cards
+    document.querySelectorAll('.contact-info, .contact-form').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        
+        const centerX = rect.width / 2;
+        const rotateY = (x - centerX) / 30;
+        
+        card.style.transform = `perspective(1000px) rotateY(${rotateY}deg) translateY(-10px)`;
+      });
+      
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateY(-3deg) translateY(-10px)';
+      });
+    });
+    
+    // Add 3D hover effect to location section
+    document.querySelectorAll('.location-text, .location-map').forEach(section => {
+      section.addEventListener('mousemove', (e) => {
+        const rect = section.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        
+        const centerX = rect.width / 2;
+        const rotateY = (x - centerX) / 40;
+        
+        if (section.classList.contains('location-text')) {
+          section.style.transform = `perspective(1000px) rotateY(${rotateY - 5}deg) translateY(-10px)`;
+        } else {
+          section.style.transform = `perspective(1000px) rotateY(${rotateY + 5}deg) translateY(-10px)`;
+        }
+      });
+      
+      section.addEventListener('mouseleave', () => {
+        if (section.classList.contains('location-text')) {
+          section.style.transform = 'perspective(1000px) rotateY(-5deg) translateY(-10px)';
+        } else {
+          section.style.transform = 'perspective(1000px) rotateY(5deg) translateY(-10px)';
+        }
+      });
+    });
+  </script>
+  <script src="scripts.js" defer></script>
+</body>
+</html>
