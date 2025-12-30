@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Umkhanyakude Farm — Quality poultry in Eswatini. Day‑old chicks, brooding & rearing, ready‑for‑market broilers, and equipment.">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#228B22">
+    <meta property="og:title" content="Umkhanyakude Farm">
+    <meta property="og:description" content="Quality poultry, brooding & rearing in Ngwenya Village, Eswatini.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://i.ibb.co/svNJ8tZC/IMG-20251207-WA0049.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="index.html">
+    <link rel="preload" as="image" href="https://i.ibb.co/svNJ8tZC/IMG-20251207-WA0049.jpg">
+    <title>Umkhanyakude Farm - Quality Poultry in Eswatini</title>
+    <link rel="icon" href="https://i.ibb.co/zH03HHJg/1000353465-1-removebg-preview.png" type="image/png">
+    <link rel="apple-touch-icon" href="https://i.ibb.co/zH03HHJg/1000353465-1-removebg-preview.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --light-gold: #FFEA00;
+            --green: #228B22;
+            --dark-green: #1A6B1A;
+            --blue: #00AAFF;
+            --purple: #6B4F2E;
+            --cream: #FFFFFF;
+            --white: #FFFFFF;
+            --black: #1F2937;
+            --card-bg: rgba(255, 255, 255, 0.92);
+            --neon-glow: 0 0 10px rgba(34,139,34,0.3), 0 0 20px rgba(34,139,34,0.25);
+            --gold-glow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Exo 2', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--black); background-color: var(--white); line-height: 1.6; overflow-x: hidden; background: none; }
+        h1, h2, h3, .section-title, .logo { font-family: 'Orbitron', sans-serif; font-weight: 700; }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+        header { background-color: #FFFFFF; box-shadow: 0 6px 18px rgba(0,0,0,0.12); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(0, 0, 0, 0.08); }
+        .header-container { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
+        .logo { order: 2; position: relative; transform-style: preserve-3d; perspective: 1000px; }
+        .logo img { height: 80px; width: auto; filter: drop-shadow(0 0 5px var(--gold)); transition: transform 0.5s ease; }
+        .logo:hover img { filter: drop-shadow(0 0 10px var(--gold)); }
+        nav { order: 1; }
+        .nav-links { display: flex; list-style: none; gap: 18px; }
+        .nav-links li { position: relative; }
+        .nav-links a { text-decoration: none; color: var(--black); font-weight: 600; font-size: 16px; padding: 12px 18px; border-radius: 10px; transition: all 0.2s ease; position: relative; z-index: 1; border: 1px solid rgba(0,0,0,0.06); background-color: transparent; }
+        .nav-links a:hover { color: var(--green); background-color: rgba(34,139,34,0.08); border-color: rgba(34,139,34,0.25); box-shadow: 0 4px 10px rgba(34,139,34,0.15); }
+        .nav-links a.active { color: var(--green); background-color: rgba(34,139,34,0.12); border-color: rgba(34,139,34,0.35); box-shadow: 0 4px 10px rgba(34,139,34,0.2); }
+        .nav-links a:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+        .mobile-menu-btn { display: none; font-size: 24px; background: none; border: none; color: var(--green); cursor: pointer; padding: 10px; border-radius: 5px; transition: all 0.3s ease; }
+        .mobile-menu-btn:hover { background-color: rgba(0, 255, 136, 0.1); box-shadow: var(--neon-glow); }
+        .hero { position: relative; color: var(--black); padding: 150px 0; text-align: center; overflow: hidden; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+        .hero::before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('https://i.ibb.co/7JNxNFV6/IMG-20251207-WA0047.jpg'); background-size: cover; background-position: center; filter: brightness(0.5) contrast(1.1); z-index: 0; transform: scale(1.1); animation: none; }
+        @keyframes backgroundMove { 0% { transform: scale(1.1) translateX(0) translateY(0); } 100% { transform: scale(1.15) translateX(-20px) translateY(20px); } }
+        .hero > * { position: relative; z-index: 1; }
+        .hero h1 { font-size: 4rem; margin-bottom: 25px; text-shadow: 0 0 10px rgba(0, 255, 136, 0.8); letter-spacing: 2px; animation: none; transform-style: preserve-3d; perspective: 500px; }
+        @keyframes glow { from { text-shadow: 0 0 10px rgba(0, 255, 136, 0.8), 0 0 20px rgba(0, 255, 136, 0.6); } to { text-shadow: 0 0 15px rgba(0, 255, 136, 1), 0 0 30px rgba(0, 255, 136, 0.8), 0 0 40px rgba(0, 255, 136, 0.6); } }
+        .hero p { font-size: 1.3rem; max-width: 800px; margin: 0 auto 40px; background-color: rgba(255, 255, 255, 0.9); padding: 25px; border-radius: 10px; border-left: 3px solid var(--gold); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); backdrop-filter: blur(5px); color: var(--black); }
+        .cta-button { display: inline-block; background: linear-gradient(45deg, var(--green), var(--blue)); color: var(--white); padding: 15px 40px; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 18px; transition: all 0.3s ease; border: none; position: relative; overflow: hidden; z-index: 1; box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4); transform-style: preserve-3d; perspective: 500px; }
+        .cta-button:before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent); transition: left 0.7s ease; z-index: -1; }
+        .cta-button:hover:before { left: 100%; }
+        .cta-button:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 10px 25px rgba(0, 255, 136, 0.6); letter-spacing: 1px; }
+        .intro { padding: 100px 0; background-color: transparent; position: relative; }
+        .intro:before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 20% 50%, rgba(0, 255, 136, 0.05) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(157, 78, 221, 0.05) 0%, transparent 50%); z-index: -1; }
+        .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .intro-media { position: relative; }
+        .intro-media img { width: 100%; height: auto; border-radius: 10px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 255, 136, 0.3); border: 1px solid rgba(0, 255, 136, 0.2); }
+        .intro-card { background-color: var(--card-bg); padding: 40px; border-radius: 15px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08); border: 1px solid #EEE; backdrop-filter: blur(4px); }
+        .intro-card:hover { box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12); }
+        .intro-card h2 { color: var(--green); font-size: 2.5rem; margin-bottom: 20px; position: relative; padding-bottom: 15px; }
+        .intro-card h2:after { content: ''; position: absolute; bottom: 0; left: 0; width: 80px; height: 3px; background: linear-gradient(90deg, var(--green), transparent); }
+        .intro-points { list-style: none; margin: 25px 0; }
+        .intro-points li { margin-bottom: 12px; padding-left: 30px; position: relative; }
+        .intro-points li:before { content: '▶'; position: absolute; left: 0; color: var(--green); font-size: 12px; }
+        .about { padding: 100px 0; background-color: transparent; }
+        .about-content { display: flex; align-items: center; gap: 50px; }
+        .about-text { flex: 1; background-color: var(--card-bg); padding: 40px; border-radius: 15px; box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08); border: 1px solid #EEE; backdrop-filter: blur(4px); }
+        .about-text h2 { color: var(--green); font-size: 2.5rem; margin-bottom: 25px; }
+        .about-text h3 { color: var(--gold); margin: 25px 0 15px; font-size: 1.5rem; }
+        .about-image { flex: 1; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12); }
+        .about-image img { width: 100%; height: auto; display: block; transition: transform 0.5s ease; }
+        .about-image:hover img { transform: scale(1.05); }
+        .products { padding: 100px 0; background-color: transparent; position: relative; }
+        .products:before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 0%, rgba(157, 78, 221, 0.05) 0%, transparent 50%); z-index: -1; }
+        .section-title { text-align: center; color: var(--green); font-size: 2.4rem; margin-bottom: 40px; position: relative; text-transform: none; letter-spacing: 0.5px; }
+        .section-title:after { content: ''; position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); width: 100px; height: 3px; background: linear-gradient(90deg, transparent, var(--green), transparent); }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; margin-bottom: 40px; }
+        .product-card { background-color: var(--card-bg); border-radius: 15px; overflow: hidden; box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1); transition: box-shadow 0.3s ease; border: 1px solid #EEE; backdrop-filter: blur(4px); position: relative; }
+        .product-card:hover { box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); }
+        .product-img { height: 220px; overflow: hidden; position: relative; }
+        .product-img:before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, transparent 70%, rgba(10, 10, 15, 0.8)); z-index: 1; }
+        .product-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease; }
+        .product-card:hover .product-img img { transform: scale(1.1); }
+        .product-info { padding: 25px; position: relative; z-index: 2; }
+        .product-info h3 { color: var(--green); margin-bottom: 12px; font-size: 1.4rem; }
+        .product-info p { color: var(--white); margin-bottom: 15px; opacity: 0.9; }
+        .product-price { color: var(--gold); font-weight: 700; font-size: 1.4rem; text-shadow: 0 0 5px rgba(212, 175, 55, 0.5); }
+        .btn-container { text-align: center; margin-top: 40px; }
+        .btn { display: inline-block; background: linear-gradient(45deg, var(--purple), var(--blue)); color: var(--white); padding: 15px 40px; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 18px; transition: all 0.3s ease; border: none; box-shadow: 0 5px 15px rgba(157, 78, 221, 0.4); transform-style: preserve-3d; perspective: 500px; position: relative; overflow: hidden; }
+        .btn:before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent); transition: left 0.7s ease; }
+        .btn:hover:before { left: 100%; }
+        .btn:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 10px 25px rgba(157, 78, 221, 0.6); letter-spacing: 1px; }
+        .location { padding: 100px 0; background-color: transparent; }
+        .location-content { display: flex; align-items: center; gap: 50px; }
+        .location-text { flex: 1; background-color: var(--card-bg); padding: 40px; border-radius: 15px; box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1); border: 1px solid #EEE; backdrop-filter: blur(4px); }
+        .location-text h2 { color: var(--green); font-size: 2.5rem; margin-bottom: 25px; }
+        .location-map { flex: 1; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12); height: 400px; border: 1px solid #EEE; }
+        .location-map iframe, .location-map img { width: 100%; height: 100%; object-fit: cover; }
+        .contact { padding: 100px 0; background-color: transparent; position: relative; }
+        .contact:before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 80% 80%, rgba(0, 170, 255, 0.05) 0%, transparent 50%); z-index: -1; }
+        .contact-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; }
+        .contact-info h2, .contact-form h2 { color: var(--green); font-size: 2.2rem; margin-bottom: 30px; }
+        .contact-info { background-color: var(--card-bg); padding: 40px; border-radius: 15px; box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1); border: 1px solid #EEE; backdrop-filter: blur(4px); }
+        .contact-form { background-color: var(--card-bg); padding: 40px; border-radius: 15px; box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1); border: 1px solid #EEE; backdrop-filter: blur(4px); }
+        .gallery { padding: 80px 0; background-color: transparent; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 18px; }
+        .gallery-item { border-radius: 12px; overflow: hidden; box-shadow: 0 8px 18px rgba(0,0,0,0.1); background: #fff; }
+        .gallery-item img { width: 100%; height: 220px; object-fit: cover; display: block; }
+        .contact-details { margin-bottom: 30px; }
+        .contact-item { display: flex; align-items: center; margin-bottom: 25px; padding: 15px; border-radius: 10px; background-color: rgba(0, 0, 0, 0.2); transition: all 0.3s ease; }
+        .contact-item:hover { background-color: rgba(0, 255, 136, 0.1); }
+        .contact-item i { background: linear-gradient(45deg, var(--green), var(--blue)); color: var(--white); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 20px; box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3); }
+        .whatsapp-btn { display: inline-flex; align-items: center; background: linear-gradient(45deg, #25D366, #128C7E); color: white; padding: 15px 25px; border-radius: 30px; text-decoration: none; font-weight: 600; margin-bottom: 20px; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4); transform-style: preserve-3d; }
+        .whatsapp-btn:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 10px 25px rgba(37, 211, 102, 0.6); }
+        .whatsapp-btn i { margin-right: 10px; font-size: 24px; }
+        .hours { background-color: rgba(255, 255, 255, 0.92); padding: 25px; border-radius: 10px; margin-top: 20px; border-left: 3px solid var(--gold); }
+        .hours h3 { color: var(--gold); margin-bottom: 15px; }
+        .contact-form form { display: flex; flex-direction: column; }
+        .form-group { margin-bottom: 25px; }
+        .form-group label { display: block; margin-bottom: 10px; font-weight: 600; color: var(--green); }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 15px; background-color: #FFFFFF; border: 1px solid #DDDDDD; border-radius: 8px; font-size: 16px; color: var(--black); transition: all 0.3s ease; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--green); box-shadow: 0 0 10px rgba(0, 255, 136, 0.3); }
+        .form-group textarea { height: 150px; resize: vertical; }
+        .submit-btn { background: linear-gradient(45deg, var(--green), var(--dark-green)); color: white; border: none; padding: 18px; border-radius: 8px; font-size: 18px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4); }
+        .submit-btn:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0, 255, 136, 0.6); letter-spacing: 1px; }
+        footer { background-color: #FFFFFF; color: var(--black); padding: 80px 0 20px; border-top: 1px solid rgba(0, 0, 0, 0.08); position: relative; overflow: hidden; }
+        footer:before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--green), var(--blue), var(--purple)); }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 50px; }
+        .footer-column h3 { color: var(--green); font-size: 1.5rem; margin-bottom: 25px; position: relative; padding-bottom: 15px; }
+        .footer-column h3::after { content: ''; position: absolute; bottom: 0; left: 0; width: 50px; height: 2px; background-color: var(--green); }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a, .footer-links li { color: var(--black); text-decoration: none; transition: all 0.3s ease; opacity: 0.8; }
+        .footer-links a:hover { color: var(--green); opacity: 1; padding-left: 5px; }
+        .social-links { display: flex; gap: 15px; margin-top: 20px; }
+        .social-links a { display: flex; align-items: center; justify-content: center; width: 45px; height: 45px; background-color: rgba(0, 0, 0, 0.05); border-radius: 50%; color: var(--black); font-size: 20px; transition: all 0.3s ease; border: 1px solid rgba(0, 0, 0, 0.08); }
+        .social-links a:hover { background-color: var(--green); transform: translateY(-5px) scale(1.1); box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4); }
+        .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.05); font-size: 14px; opacity: 0.7; }
+        .footer-bottom a { color: var(--gold); text-decoration: none; }
+        .reveal { opacity: 0; transform: translateY(50px); transition: all 0.8s ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        .hero h1 { animation: none; }
+        .particles { display: none; }
+        .particle { position: absolute; background-color: rgba(0, 255, 136, 0.2); border-radius: 50%; animation: floatParticle 15s infinite linear; }
+        @keyframes floatParticle { 0% { transform: translateY(100vh) translateX(0); } 100% { transform: translateY(-100px) translateX(100px); } }
+        @media (max-width: 992px) { .hero h1 { font-size: 3rem; } .intro-grid, .about-content, .location-content { flex-direction: column; grid-template-columns: 1fr; } .intro-media, .intro-card, .about-text, .about-image, .location-text, .location-map { width: 100%; transform: none !important; } .intro-card, .about-text, .location-text { margin-top: 30px; } }
+        @media (max-width: 768px) { .mobile-menu-btn { display: block; } .nav-links { position: fixed; top: 80px; left: -100%; width: 100%; flex-direction: column; background-color: #FFFFFF; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: left 0.5s ease; border-top: 1px solid rgba(0, 255, 136, 0.2); z-index: 999; } .nav-links.active { left: 0; } .nav-links li { margin: 15px 0; width: 100%; text-align: center; } .hero h1 { font-size: 2.5rem; } .section-title, .intro-card h2, .about-text h2, .location-text h2 { font-size: 2.2rem; } }
+        @media (max-width: 480px) { .hero { padding: 100px 0; } .hero h1 { font-size: 2rem; } .intro, .about, .products, .location, .contact { padding: 70px 0; } .section-title, .intro-card h2, .about-text h2, .location-text h2 { font-size: 1.8rem; } .product-grid { grid-template-columns: 1fr; } .intro-card, .about-text, .location-text, .contact-info, .contact-form { padding: 25px; } .gallery { padding: 60px 0; } .gallery-item img { height: 180px; } }
+        .page-loader { position: fixed; inset: 0; background: radial-gradient(ellipse at center, rgba(34,139,34,0.08), rgba(212,175,55,0.06)), #FFFFFF; display: grid; place-items: center; z-index: 2000; transition: opacity 0.35s ease; backdrop-filter: blur(4px); }
+        .page-loader.hide { opacity: 0; pointer-events: none; }
+        .loader-wrap { position: relative; width: min(42vw, 220px); height: min(42vw, 220px); border-radius: 50%; overflow: hidden; box-shadow: 0 12px 30px rgba(0,0,0,0.15); }
+        .loader-image { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; transform: scale(1); animation: loaderPulse 1.6s ease-in-out infinite; }
+        .loader-ring { position: absolute; inset: -10px; border-radius: 50%; background: conic-gradient(from 0deg, rgba(34,139,34,0.85), rgba(212,175,55,0.85), rgba(0,170,255,0.85), rgba(34,139,34,0.85)); -webkit-mask: radial-gradient(circle, transparent calc(50% - 9px), #000 calc(50% - 9px)); mask: radial-gradient(circle, transparent calc(50% - 9px), #000 calc(50% - 9px)); animation: loaderSpin 1.2s linear infinite; filter: drop-shadow(0 0 12px rgba(34,139,34,0.25)); }
+        @keyframes loaderSpin { to { transform: rotate(360deg); } }
+        @keyframes loaderPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.04); } }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    <div id="pageLoader" class="page-loader"><div class="loader-wrap"><img class="loader-image" src="https://i.ibb.co/svNJ8tZC/IMG-20251207-WA0049.jpg" alt="Loading"><div class="loader-ring"></div></div></div>
+    <header>
+        <div class="container header-container">
+            <nav>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="chick-rearing.html">Chick Rearing & Brooding</a></li>
+                </ul>
+            </nav>
+            <div class="logo">
+                <a href="index.html"><img src="https://i.ibb.co/zH03HHJg/1000353465-1-removebg-preview.png" alt="Umkhanyakude Farm Logo" loading="lazy"></a>
+            </div>
+        </div>
+    </header>
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>UMKHANYAKUDE FARM</h1>
+            <p>Umkhanyakude Farm is a growing poultry enterprise based in Ngwenya Village, Eswatini. Founded and managed by a young, passionate entrepreneurial woman, the farm is dedicated to delivering healthy, well-raised chickens to the community and beyond. With a strong commitment to quality and care, Umkhanyakude Farm specializes in brooding and rearing chicks from their earliest stages, ensuring they grow in a safe, healthy, and well-managed environment.</p>
+            <a href="#products" class="cta-button">EXPLORE OUR PRODUCTS</a>
+        </div>
+    </section>
+    <section class="intro reveal" id="intro">
+        <div class="container">
+            <div class="intro-grid">
+                <div class="intro-media">
+                    <img src="https://i.ibb.co/svNJ8tZC/IMG-20251207-WA0049.jpg" alt="Healthy broiler chicks" loading="lazy">
+                </div>
+                <div class="intro-card">
+                    <h2>Poultry Excellence</h2>
+                    <p>We raise healthy, uniform broilers using careful breeding, optimal brooding, and clean grow‑out practices.</p>
+                    <ul class="intro-points">
+                        <li>Quality chicks bred for fast, consistent growth</li>
+                        <li>Animal welfare and sustainable practices</li>
+                        <li>Reliable supply for homes and businesses</li>
+                    </ul>
+                    <p>Serving Ngwenya Village and the region with poultry you can trust.</p>
+                    <div class="btn-container">
+                        <a href="#products" class="btn">Explore Products</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about reveal" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Our Business</h2>
+                    <p>The business aims to meet the rising demand for quality poultry in Ngwenya by supplying local households, restaurants, and small businesses with strong, well-nurtured birds. Driven by ambition and vision, the owner intends to scale production over time and expand the farm's reach to new markets outside Ngwenya—providing reliable poultry solutions to a wider audience.</p>
+                    <h3>Our Vision</h3>
+                    <p>To become the leading poultry farm in Eswatini, recognized for quality, reliability, and sustainable farming practices that contribute to food security and economic growth.</p>
+                    <h3>Our Mission</h3>
+                    <p>To provide healthy, well-raised poultry products to our community while empowering local farmers through knowledge sharing and creating sustainable employment opportunities.</p>
+                    <h3>Our Goals</h3>
+                    <p>1. Increase production capacity by 50% within the next two years<br>
+                    2. Expand market reach to three new regions in Eswatini<br>
+                    3. Implement sustainable farming practices that minimize environmental impact<br>
+                    4. Create 10 new employment opportunities for local youth</p>
+                    <p>Umkhanyakude Farm stands as a symbol of dedication, empowerment, and agricultural excellence, contributing to food security and economic growth within the community.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://i.ibb.co/dwrtQQhC/20251213-070644.jpg" alt="Farm Owner with Chickens" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="products reveal" id="products">
+        <div class="container">
+            <h2 class="section-title">OUR PRODUCTS</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://i.ibb.co/dsr5thTD/IMG-20251207-WA0051.jpg" alt="Day-Old Chicks" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Day-Old Broiler Chicks</h3>
+                        <p>Healthy, vaccinated day-old broiler chicks ready for rearing. These chicks are bred for optimal growth and meat production.</p>
+                        <p class="product-price">From E45 per chick</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://i.ibb.co/X1Wgzrc/IMG-20251207-WA0048.jpg" alt="3-Week Old Chicks" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>3-Week Old Chicks</h3>
+                        <p>Partially grown chicks that have passed the critical brooding stage. Ready for growing out to maturity.</p>
+                        <p class="product-price">From E85 per chick</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://i.ibb.co/ZpP9k0rp/20251213-065621.jpg" alt="Ready-for-Market Broilers" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Ready-for-Market Broilers</h3>
+                        <p>Fully grown broilers ready for processing and consumption. Average weight of 2.5-3kg per bird.</p>
+                        <p class="product-price">From E120 per bird</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://i.ibb.co/jZ1CZZRY/IMG-20251207-WA0050.jpg" alt="Poultry Equipment" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Poultry Equipment & Supplies</h3>
+                        <p>Feeders, drinkers, heating equipment, and poultry feed to support your rearing operations.</p>
+                        <p class="product-price">Various Prices</p>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-container">
+                <a href="#contact" class="btn">ORDER NOW</a>
+            </div>
+        </div>
+    </section>
+    <section class="location reveal" id="chick-rearing">
+        <div class="container">
+            <div class="location-content">
+                <div class="location-text">
+                    <h2>Chick Rearing & Brooding Services</h2>
+                    <p>At Umkhanyakude Farm, we specialize in the critical early stages of chick development. Our brooding services ensure chicks receive optimal warmth, nutrition, and care during their first weeks of life.</p>
+                    <p>We offer:</p>
+                    <ul style="margin-left: 20px; margin-bottom: 20px;">
+                        <li>Temperature-controlled brooding facilities</li>
+                        <li>Specialized starter feeds for optimal growth</li>
+                        <li>Vaccination and health monitoring</li>
+                        <li>Expert care by trained poultry handlers</li>
+                        <li>Consultation services for new poultry farmers</li>
+                    </ul>
+                    <p>Our brooding process ensures chicks develop strong immune systems and healthy growth patterns, setting the foundation for successful meat production.</p>
+                    <p>We also offer training workshops for local farmers interested in starting their own poultry operations.</p>
+                </div>
+                <div class="location-map">
+                    <img src="https://i.ibb.co/jZ1CZZRY/IMG-20251207-WA0050.jpg" alt="Chick Brooding Area" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="location reveal">
+        <div class="container">
+            <div class="location-content">
+                <div class="location-text">
+                    <h2>Map & Coordinates</h2>
+                    <p>Umkhanyakude Farm is in Ngwenya Village, Eswatini. The farm is easily accessible from major routes.</p>
+                    <div class="info-list" style="margin: 15px 0;">
+                        <div class="info-label">GPS</div>
+          <div class="info-value">-26.232276544648144, 31.026650002047756</div>
+          <div class="info-label">Address</div>
+                        <div class="info-value">Ngwenya Village, Hhohho Region, Eswatini</div>
+                    </div>
+                    <p>Visits are by appointment. Contact us to schedule a farm tour.</p>
+                </div>
+                <div class="location-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3586.881521692453!2d31.02411547637055!3d-26.22751736271909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ee7c3d5d6d6d6d5%3A0x1ee7c3d5d6d6d6d5!2sNgwenya%20Village%2C%20Eswatini!5e0!3m2!1sen!2s!4v1686145678901!5m2!1sen!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">CONTACT US</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <div class="contact-details">
+                        <a href="https://wa.me/26878552994" class="whatsapp-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> WhatsApp Us
+                        </a>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Phone Numbers</h4>
+                                <p>+268 7855 2994 </p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email Address</h4>
+                                <p>umkhanyakudefarm@gmail.com</p>
+                                <p>enquiry@umkhanyakudefarm.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Farm Location</h4>
+                                <p>Ngwenya Village, Hhohho Region</p>
+                                <p>Eswatini</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hours">
+                        <h3>Working Hours</h3>
+                        <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                        <p>Saturday: 8:00 AM - 1:00 PM</p>
+                        <p>Sunday: Closed</p>
+                        <p>Emergency orders: Available 24/7 by phone</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <form id="contactForm" action="https://formspree.io/f/mqekjjzl" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="orderType">Order Type</label>
+                            <select id="orderType" name="orderType" required>
+                                <option value="">Select an option</option>
+                                <option value="day-old">Day-Old Chicks</option>
+                                <option value="3-week">3-Week Old Chicks</option>
+                                <option value="market-ready">Market-Ready Broilers</option>
+                                <option value="equipment">Poultry Equipment</option>
+                                <option value="consultation">Consultation Service</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message / Order Details</label>
+                            <textarea id="message" name="message" placeholder="Please provide details about your order or inquiry..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gallery reveal" id="gallery">
+        <div class="container">
+            <h2 class="section-title">GALLERY</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><a href="https://ibb.co/bjJxj4D3" target="_blank" rel="noopener"><img src="https://i.ibb.co/7JNxNFV6/IMG-20251207-WA0047.jpg" alt="Gallery 1" loading="lazy"></a></div>
+                <div class="gallery-item"><a href="https://ibb.co/TDbx0CBk" target="_blank" rel="noopener"><img src="https://i.ibb.co/svNJ8tZC/IMG-20251207-WA0049.jpg" alt="Gallery 2" loading="lazy"></a></div>
+                <div class="gallery-item"><a href="https://ibb.co/XkYfCVy7" target="_blank" rel="noopener"><img src="https://i.ibb.co/X1Wgzrc/IMG-20251207-WA0048.jpg" alt="Gallery 3" loading="lazy"></a></div>
+                <div class="gallery-item"><a href="https://ibb.co/Swgq4Nmq" target="_blank" rel="noopener"><img src="https://i.ibb.co/dsr5thTD/IMG-20251207-WA0051.jpg" alt="Gallery 4" loading="lazy"></a></div>
+                <div class="gallery-item"><a href="https://ibb.co/G4KzcNtC" target="_blank" rel="noopener"><img src="https://i.ibb.co/dsr5thTD/IMG-20251207-WA0051.jpg" alt="Gallery 5" loading="lazy"></a></div>
+                <div class="gallery-item"><a href="https://ibb.co/nsFD6BVH" target="_blank" rel="noopener"><img src="https://i.ibb.co/svNJ8tZC/IMG-20251207-WA0049.jpg" alt="Gallery 6" loading="lazy"></a></div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#chick-rearing">Chick Rearing & Brooding</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Ngwenya Village, Eswatini</li>
+                        <li><i class="fas fa-phone-alt"></i> +268 7855 2994 </li>
+                        <li><i class="fas fa-envelope"></i> umkhanyakudefarm@gmail.com</li>
+                        <li><i class="fas fa-envelope"></i> enquiry@umkhanyakudefarm.com</li>
+                    </ul>
+                    <a href="https://wa.me/26878552994" class="whatsapp-btn" target="_blank" style="padding: 12px 20px; font-size: 14px; margin-top: 10px;">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <div class="social-links">
+                        <a href="#" title="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@umkhanyakude_farm?is_from_webapp=1&sender_device=pc" title="TikTok" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/umkhanyakude_farm/" title="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@umkhanyakude_farm?si=qqOkmcdPmvfyvaWo" title="YouTube" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Opening Hours</h3>
+                    <ul class="footer-links">
+                        <li>Mon - Fri: 8:00 AM - 5:00 PM</li>
+                        <li>Saturday: 8:00 AM - 1:00 PM</li>
+                        <li>Sunday: Closed</li>
+                        <li>Emergency: 24/7 by Phone</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Umkhanyakude Farm • Established 2025 • All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({ top: targetElement.offsetTop - 80, behavior: 'smooth' });
+                }
+            });
+        });
+        
+        // Inline reveal script removed in favor of scripts.js IntersectionObserver
+        
+        const particlesContainer = document.getElementById('particles');
+        const particleCount = 50;
+        for(let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            const size = Math.random() * 4 + 1; particle.style.width = `${size}px`; particle.style.height = `${size}px`;
+            particle.style.left = `${Math.random() * 100}%`;
+            const delay = Math.random() * 15; const duration = Math.random() * 10 + 10; particle.style.animationDelay = `${delay}s`; particle.style.animationDuration = `${duration}s`;
+            const color = Math.random() > 0.5 ? 'rgba(0, 255, 136, 0.3)' : 'rgba(0, 170, 255, 0.3)'; particle.style.backgroundColor = color;
+            particlesContainer.appendChild(particle);
+        }
+        document.querySelectorAll('.product-card').forEach(card => { card.addEventListener('mousemove', () => {}); card.addEventListener('mouseleave', () => { card.style.transform = ''; }); });
+    </script>
+    <script src="scripts.js" defer></script>
+</body>
+</html>
